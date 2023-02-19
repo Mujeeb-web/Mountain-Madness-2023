@@ -1,13 +1,15 @@
+//Import dependencies
 import React, { useEffect } from 'react';
-
 import { useNavigate } from 'react-router-dom';
-
+//Import components
 import Hearts from '../Hearts';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
+import Questions from '../Questions/Questions';
 
 function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);
   const [timer, setTimer] = React.useState(15);
+  const [stage, setStage] = React.useState(0);
 
   const navigate = useNavigate();
 
@@ -25,7 +27,7 @@ function Game() {
     <div>
       <p>Countdown Timer</p>
       <p>Ghost</p>
-      <p>Ghost speech</p>
+      <Questions stage={stage}></Questions>
       {lives.map(e => (
         <Hearts></Hearts>
       ))}

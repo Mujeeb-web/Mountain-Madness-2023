@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../styles.css';
+
 import { useNavigate } from 'react-router-dom';
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <p className='title'>Ghost Babble: The Mountain Escape</p>
+      <p className='button start-game'>Ghost Babble: The Mountain Escape</p>
       <section className='blurb'>
         lorem ipsum sdflkj sflksdjf sdfsdf ljkl sdfdsf lkjkljs fsfd
         lkjlkj
