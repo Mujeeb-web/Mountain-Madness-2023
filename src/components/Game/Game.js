@@ -15,21 +15,12 @@ function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);
   const [timer, setTimer] = React.useState(15);
   const [stage, setStage] = React.useState(0);
+
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (lives.length === 0) {
-      navigate('/lose');
-    }
-  });
-
-  function handleTimeout() {
+  function handleTimer() {
     setLives(lives.slice(0, -1));
     setTimer(15);
-  }
-
-  function handleIncorrect() {
-    setLives(lives - 1);
   }
 
   return (
@@ -51,11 +42,8 @@ function Game() {
         <Hearts key={index}></Hearts>
       ))}
       {/* Position the Rabbit in one of 5 positions, these can be a prop that is related to stage */}
-      <button onClick={() => setLives(lives.slice(0, -1))}>
-        Lose a Life
-      </button>
       <CountdownTimer
-        handleTimeout={handleTimeout}
+        handleTimeout={handleTimer}
         timer={timer}
         setTimer={setTimer}
       ></CountdownTimer>
@@ -63,7 +51,9 @@ function Game() {
         stage={stage}
         setStage={setStage}
         question={QuestionData[stage]}
-        handleIncorrect={handleIncorrect}
+        setLives={setLives}
+        handleTimer={handleTimer}
+        lives={lives}
       ></Input>
     </div>
   );
