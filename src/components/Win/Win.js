@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Win() {
-  return <div></div>;
+  return <div>You Win!</div>;
 }
 
 export default Win;

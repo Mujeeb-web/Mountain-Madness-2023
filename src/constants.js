@@ -1,10 +1,15 @@
 export const QuestionData = [
-  { Question: "True love doesn't exist", Answer: 'true' },
-  { Question: 'Remove your fake friends', Answer: 'friends' },
-  { Question: 'stick to the right side', Answer: 'stick' },
-  { Question: " Let's leave together", Answer: 'together' },
+  { Question: "urte love doesn't exist", Answer: 'true' },
+  { Question: 'Remove your fake endsfri', Answer: 'friends' },
+  { Question: 'kitcs to the right side', Answer: 'stick' },
+  { Question: " Let's leave getherto", Answer: 'together' },
+
   {
-    Question: 'Forever stay truthful to yourself',
-    Answer: 'forever',
-  },
+    Question: 'fovreer stay truthful to yourself',Answer: 'forever',},
 ];
+<button
+        className='Button'
+        onClick={() => navigate('/win')}
+      >
+        Start
+      </button>

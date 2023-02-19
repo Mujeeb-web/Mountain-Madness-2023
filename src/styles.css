@@ -10,22 +10,42 @@
   position: relative;
 }
 
+.hearts{
+  z-index: 2;
+  position: absolute;
+  top: 72%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+}
+
+.bar{
+  z-index: 2;
+  position: absolute;
+  top: 76%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .ghost {
-  position: fixed;
-  height: 150px;
-  width: 150px;
-  position: fixed;
-  top: 150px;
-  left: 40px;
+  z-index: 2;
+  position: absolute;
+  top: 32%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px
 }
 
 .bunny {
-  position: relative;
-  height: 75px;
-  width: 75px;
-  top: 105px;
-  right: 450px;
+  z-index: 2;
+  position: absolute;
+  top: 39%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
 }
+
 
 .game-background {
   width: 100vw;
@@ -71,10 +91,14 @@
 }
 
 .question {
-  position: fixed;
-  top: 100px;
-  left: 500px;
-  font-size: 40px;
+  z-index: 2;
+  position: absolute;
+  top: 39%;
+  left: 70%;
+  transform: translate(-111%, -132%);
+  font-size: 50px;
+  color: black;
+
 }
 
 .fade-in-and-fade-out {

@@ -26,6 +26,7 @@ function Input({ stage, setStage, question, lives, setLives }) {
       <form onSubmit={e => handleSubmit(e)}>
         <label htmlFor='user-input'></label>
         <input
+        className='bar'
           id='user-input'
           value={guess}
           onChange={e => setGuess(e.target.value)}
