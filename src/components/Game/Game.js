@@ -6,13 +6,16 @@ import Hearts from '../Hearts';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
 import Questions from '../Questions/Questions';
 import Input from '../Input';
+//Import Data
+import { QuestionData } from '../../constants';
 
 function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);
   const [timer, setTimer] = React.useState(15);
   const [stage, setStage] = React.useState(0);
-
+  const [question, setQuestion] = React.useState('');
   const navigate = useNavigate();
+  console.log(question);
 
   useEffect(() => {
     if (lives.length === 0) {
@@ -25,19 +28,23 @@ function Game() {
     setTimer(15);
   }
 
-  function validateGuess(guess,answer) {
-    // If guess === answer, Stage += 1
-    // If guess !== answer, life -= 1, reset timer to 15
+  function validateGuess(guess) {
+    console.log(guess);
+    console.log(QuestionData[stage]);
+    if (guess === QuestionData[stage].Answer) {
+      alert('correct');
+    }
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    validateGuess(event.target[0].value)
+    validateGuess(event.target[0].value);
   }
+
   return (
     <div>
       <p>Ghost</p>
-      <Questions stage={stage}></Questions>
+      <Questions question={question.question}></Questions>
       {lives.map(index => (
         <Hearts key={index}></Hearts>
       ))}
