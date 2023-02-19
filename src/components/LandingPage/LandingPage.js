@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles.css';
 import { useNavigate } from 'react-router-dom';
+import background from '../../Images/background-2.jpg';
 
 //We need a fullscreen background, A title, An intro blurb, A play button
 

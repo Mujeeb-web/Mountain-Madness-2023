@@ -1,19 +1,12 @@
 import React from 'react';
 
-function Input({
-  stage,
-  setStage,
-  question,
-  setLives,
-  handleTimer,
-  lives,
-}) {
+function Input({ stage, setStage, question, lives, setLives }) {
   const [guess, setGuess] = React.useState('');
 
   function validateGuess(guess, question) {
     if (guess !== question.Answer) {
       alert('incorrect');
-      handleIncorrect();
+      setLives(lives.slice(0, -1));
       setGuess('');
     }
     if (guess === question.Answer) {
@@ -21,11 +14,6 @@ function Input({
       setStage(stage + 1);
       setGuess('');
     }
-  }
-
-  function handleIncorrect() {
-    setLives(lives.slice(0, -1));
-    handleTimer();
   }
 
   function handleSubmit(event) {
