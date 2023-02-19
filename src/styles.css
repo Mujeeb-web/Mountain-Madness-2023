@@ -10,6 +10,31 @@
   position: relative;
 }
 
+.ghost {
+  position: fixed;
+  height: 150px;
+  width: 150px;
+  position: fixed;
+  top: 150px;
+  left: 40px;
+}
+
+.bunny {
+  position: relative;
+  height: 75px;
+  width: 75px;
+  top: 105px;
+  right: 450px;
+}
+
+.game-background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
 .Button {
   padding: 12px 24px;
   border-radius: 4px;
@@ -27,6 +52,8 @@
 
 .homeBackground {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .start-game {
@@ -43,9 +70,11 @@
   text-transform: uppercase;
 }
 
-.homeBackground {
-  width: 100vw;
-  height: 100vh;
+.question {
+  position: fixed;
+  top: 100px;
+  left: 500px;
+  font-size: 40px;
 }
 
 .fade-in-and-fade-out {

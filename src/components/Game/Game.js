@@ -8,7 +8,7 @@ import { QuestionData } from '../../constants';
 //Import Images
 import Ghost from '../../Images/ghost.png';
 import Rabbit from '../../Images/rabbit.png';
-import background from '../../Images/background-2.jpg';
+import background from '../../Images/background-2.png';
 
 function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);
@@ -17,22 +17,21 @@ function Game() {
   return (
     <div>
       <img
+        className='game-background'
         src={background}
         alt={'zoomed in mountain'}
       />
       <img
+        className='ghost'
         src={Ghost}
         alt={'A Cute Ghost'}
-        height={'75'}
-        width={'75'}
       ></img>
       <img
+        className='bunny'
         src={Rabbit}
         alt={'A Cute Rabbit'}
-        height={'50'}
-        width={'50'}
       ></img>
-      <div>{QuestionData[stage].Question}</div>
+      <div className='question'>{QuestionData[stage].Question}</div>
       {lives.map(index => (
         <Hearts key={index}></Hearts>
       ))}
