@@ -2,17 +2,6 @@
   color: red;
 }
 
-.blurb {
-  font-family: Monaco, fantasy;
-  color: #5e17a9;
-}
-
-.landing-page-div {
-  font-family: Monaco, fantasy;
-  color: #5e17a9;
-  
-} 
-
 .container {
   display: flex;
   justify-content: center;
@@ -24,41 +13,34 @@
 .Button {
   padding: 12px 24px;
   border-radius: 4px;
-  background-color: #792784;
+  background-color: #007bff;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  font-family: "trebuchet ms";
   text-align: center;
   display: flex;
   position: absolute;
   bottom: 30%;
   left: 50%;
   transform: translate(-50%, 50%);
-} 
-
+}
 
 .homeBackground {
   position: relative;
 }
 
 .start-game {
-
-    text-align: center;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    font-size: 10vmin;
-    color:#5e17a9;
-    text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.start-story{
-  
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 10vmin;
+  color: #5e0647;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .homeBackground {
@@ -66,10 +48,10 @@
   height: 100vh;
 }
 
-.fade-in-out {
+.fade-in-and-fade-out {
   text-align: center;
   position: absolute;
-  top: 15%;
+  top: 37%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -78,8 +60,24 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
   text-transform: uppercase;
-  animation: fadeInOut 5s ease-in-out;
-  -webkit-animation: fadeInOut 5s ease-in-out;
+  animation: fadeInOut 10s ease-in-out forwards;
+  -webkit-animation: fadeInOut 10s ease-in-out forwards;
+}
+
+.fade-in {
+  text-align: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 2vmin;
+  color: #666;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeIn 15s ease-in-out;
+  -webkit-animation: fadeIn 15s ease-in-out;
 }
 
 @keyframes fadeInOut {
@@ -89,11 +87,33 @@
   25% {
     opacity: 1;
   }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
   75% {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
