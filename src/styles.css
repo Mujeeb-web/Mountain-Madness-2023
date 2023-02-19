@@ -48,3 +48,24 @@
   width: 100vw;
   height: 100vh;
 }
+
+.fade-in-out {
+  animation: fadeInOut 5s ease-in-out;
+  -webkit-animation: fadeInOut 5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
