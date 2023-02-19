@@ -48,3 +48,39 @@
   width: 100vw;
   height: 100vh;
 }
+
+.fade-in-out {
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 2vmin;
+  color: #666;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeInOut 5s ease-in-out;
+  -webkit-animation: fadeInOut 5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.container {
+  background: linear-gradient(to bottom, #000000, #800080);
+  height: 100vh;
+}
