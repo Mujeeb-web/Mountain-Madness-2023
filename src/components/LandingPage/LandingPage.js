@@ -7,7 +7,7 @@ function LandingPage() {
   const navigate = useNavigate();
   return (
     <div>
-      <div>Story line starts with fade in fade out</div>
+      <div className='start-story'>Story line starts with fade in fade out</div>
       {/* If storyline has finished telling, then show the instruction paragraph and button */}
       <button onClick={() => navigate('/game')}>Start</button>
     </div>
