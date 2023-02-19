@@ -9,9 +9,7 @@ function LandingPage() {
   return (
     <div>
       <div className='fade-in-and-fade-out'>
-        Game description: This is a modified word scrambling game. The
-        objective is to rearrange the jumbled words before the time
-        runs out.
+        This is a modified word scrambling game.
       </div>
       <div className='fade-in'>
         Two friends, rabbit and snake, hike up a mountain. When they
@@ -23,7 +21,7 @@ function LandingPage() {
       <div className='container'> </div>
       {/* If storyline has finished telling, then show the instruction paragraph and button */}
       <button
-        className='Button'
+        className='ButtonLP'
         onClick={() => navigate('/game')}
       >
         Start

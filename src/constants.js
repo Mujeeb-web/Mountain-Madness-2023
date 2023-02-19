@@ -3,13 +3,5 @@ export const QuestionData = [
   { Question: 'Remove your fake endsfri', Answer: 'friends' },
   { Question: 'kitcs to the right side', Answer: 'stick' },
   { Question: " Let's leave getherto", Answer: 'together' },
-
-  {
-    Question: 'fovreer stay truthful to yourself',Answer: 'forever',},
+  {Question: 'fovreer stay truthful to yourself',Answer: 'forever',},
 ];
-<button
-        className='Button'
-        onClick={() => navigate('/win')}
-      >
-        Start
-      </button>

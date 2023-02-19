@@ -1,11 +1,18 @@
+//Import dependencies
+import React from 'react';
+//Import components
+import Hearts from '../Hearts';
+import Input from '../Input';
+//Import Data
+import { QuestionData } from '../../constants';
+//Import Images
+import Ghost from '../../Images/ghost.png';
+import Rabbit from '../../Images/rabbit.png';
+import background from '../../Images/background-2.png';
+
 function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);
   const [stage, setStage] = React.useState(0);
-
-  // Add a check to make sure that the stage state is within the range of the QuestionData array
-  if (stage >= QuestionData.length) {
-    return <div>Game over</div>;
-  }
 
   return (
     <div>
@@ -30,6 +37,7 @@ function Game() {
       ))}
       {/* Position the Rabbit in one of 5 positions, these can be a prop that is related to stage */}
       <Input
+        className ='bar'
         stage={stage}
         setStage={setStage}
         question={QuestionData[stage]}
