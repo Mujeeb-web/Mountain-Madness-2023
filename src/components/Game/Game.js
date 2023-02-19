@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Hearts from '../Hearts';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
 import Questions from '../Questions/Questions';
+import Input from '../Input';
 
 function Game() {
   const [lives, setLives] = React.useState([1, 2, 3]);
@@ -23,24 +24,37 @@ function Game() {
     setLives(lives.slice(0, -1));
     setTimer(15);
   }
+
+  function validateGuess(guess,answer) {
+    // If guess === answer, Stage += 1
+    // If guess !== answer, life -= 1, reset timer to 15
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    validateGuess(event.target[0].value)
+  }
   return (
     <div>
-      <p>Countdown Timer</p>
       <p>Ghost</p>
       <Questions stage={stage}></Questions>
-      {lives.map(e => (
-        <Hearts></Hearts>
+      {lives.map(index => (
+        <Hearts key={index}></Hearts>
       ))}
+      {/* Position the Rabbit in one of 5 positions, these can be a prop that is related to stage */}
       <p>Rabbit</p>
-      <p>Guess Box</p>
       <button onClick={() => setLives(lives.slice(0, -1))}>
         Lose a Life
       </button>
-      <CountdownTimer
+      {/* <CountdownTimer
         handleTimeout={handleTimeout}
         timer={timer}
         setTimer={setTimer}
-      ></CountdownTimer>
+      ></CountdownTimer> */}
+      <Input
+        setStage={setStage}
+        handleSubmit={handleSubmit}
+      ></Input>
     </div>
   );
 }
