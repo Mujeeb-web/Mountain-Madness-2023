@@ -1,11 +1,20 @@
 import React from 'react';
 
-import LandingPage from '../LandingPage'
+import { useNavigate } from 'react-router-dom';
 
 function App() {
-  return <div>
-    <LandingPage/>
-  </div>;
+  const navigate = useNavigate();
+
+  return (
+    <div>
+      <p className='title'>Ghost Babble: The Mountain Escape</p>
+      <section className='blurb'>
+        lorem ipsum sdflkj sflksdjf sdfsdf ljkl sdfdsf lkjkljs fsfd
+        lkjlkj
+      </section>
+      <button onClick={() => navigate('/landing')}>Play!</button>
+    </div>
+  );
 }
 
 export default App;
